@@ -24,47 +24,49 @@ ___
 
 ___
 ####**1. スタイル調整**
-**Rig Builder**から**ogAutoRig**を起動し、
-**Import Style Template** でスタイルを読み込みます。
+**Builder**から**Import ~ Template** で基本となるスタイルを読み込みます。
 
 ![](imgs/joint_attrs_abstract1.png)
 
 **+骨の位置合わせと軸の設定**  
-骨の位置をモデルに合わせ調整したら、**[Joint Edit Tool](joint_edit.md)**や、
+骨の位置をモデルに合わせ調整したら、**[Guide Editor](guide_editor.md)**や、
 Maya標準機能のOrientJointツールなどを使いつつ、センターとL側の骨の軸の向きを設定します。
   
+※ただし下記骨の軸は自動調整されるので、軸の向きの調整は不要です。
+arm_style_L ~ hand_style_L
+leg_style_L ~ foot_style_L
+
+hip_style_C, leg_style_Lは水平に
+
+
 軸の向きは下の設定に合わせて下さい。
 スタイル骨の初期設定がこの設定なので、よく分からない時は骨の軸を表示し、
 それが初期設定と大体同じか確認してみて下さい。
   
-part       |primary axis|up axis    |world up
------------|------------|-----------|--------
-root       |world       |world      |world
-spine      |x+          |y+         |z-
-neck       |x+          |y+         |z-
-head       |x+          |y+         |z-
-shoulder(L)|x+          |y+         |z-
-arm(L)     |x+          |y+         |z-
-hand(L)    |x+          |y+         |free
-waist      |x+          |y+         |z-
-leg(L)     |x+          |y+         |z-
-foot(L)    |x+          |y+         |y-
+part       |auto align|primary axis|up axis    |world up
+-----------|----------|------------|-----------|--------
+spine      |yes       |            |           |
+neck       |yes       |            |           |
+head       |yes       |            |           |
+shoulder(L)|yes       |            |           |
+arm(L)     |yes       |            |           |
+finger(L)  |no        |x+          |-z         |y+
+leg(L)     |yes       |            |           |
+toe(L)     |no        |x+          |z+         |y+
 
-※footパートはankle1から先の部分です。
-※handパートはwrist1から先の部分で、worldUpは自由です。  
+※toe => toe_style_L, toeEnd_style_L  
 <br>
 **+足のピボット**
 軸設定が終わったら、足のピボット位置を設定して下さい。
 
-locator             |役割            |調整方法
---------------------|---------------|----
-leg_L_foot_piv_outer|IKの外側のピボット  |txのみで調整
-leg_L_foot_piv_inner|IKの内側のピボット  |txのみで調整
-leg_L_foot_piv_heel |IKの踵ピボット     |tzのみで調整
+locator             |役割            
+--------------------|----------------
+leg_L_piv_outer     |外側のピボット  
+leg_L_piv_inner     |内側のピボット  
+leg_L_piv_heel      |かかとピボット     
+leg_L_piv_toe       |つま先ピボット     
+
 <br>
-**+骨の分割数**
-IKリグが作成されるパート(arm, leg)は骨を任意に分割できます。
-パートのルート骨には次のアトリビュートがあるので、それぞれ設定して下さい。　　
 
 ![](imgs/joint_attrs2.png)
 Attr             |意味
@@ -77,16 +79,16 @@ bj_split         |バインド骨の分割数
 <br>
 **+スタイル骨のミラー**
 L側の設定がすべて終わったら、ミラーリングしたい骨のルート（人型ならshoulder1_L, leg1_L）を選択し
-**[Joint Edit Tool](joint_edit.md)**の**Mirror Joint**でミラーして下さい。
+**ogRig2->Builder->Mirror Template**でミラーして下さい。
   
 
 ___
 ####**2. リグの生成**
-ルートジョイント（hip1)を選択、**Build Rig** ボタンを押し、リグを生成します。
+ルートジョイントを選択し、**ogRig2->Builder->Build Hierarcy** ボタンを押し、リグを生成します。
 完了すると、このようなリグと階層が作成されます。
 
 ![](imgs/rig_fin.png)
-![](imgs/hierarchy1.png)
+<!-- ![](imgs/hierarchy1.png) -->
 
   
 ___

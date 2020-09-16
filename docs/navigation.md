@@ -1,4 +1,6 @@
 # ogrig2
 
-[Flow](index.md)
+[WorkFlow Basic](index.md)
 [Guide Editor](guide_editor.md)
+[WorkFlow Advance](advance.md)
+[ogSim](ogsim.md)
