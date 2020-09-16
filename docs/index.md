@@ -1,11 +1,13 @@
 ___
-####**Tool設定 (Maya2016, 2016.5, 2017 対応)**
-Maya起動バッチのモジュールパスに以下のパスを追加して起動すると、
-Y:\devtools\MayaEnvDP\ogtools
-画像のようなメニューが出てきます。
+####**対応バージョン 2016, 2016.5, 2017, 2018, 2019, 2020**
 
-※ モジュールパスに旧ツールフォルダが登録されている人は削除してください。
-旧ツールフォルダ： Y:\devtools\maya[version]\modules
+####**Tool設定**
+Maya起動バッチに以下の行を追加して起動すると、
+
+call Y:\devtools\MayaEnvDP\ogrig2\<version>\__env__.bat
+
+メニューに「ogRig2」が出てきます。
+
 
 
 ![](imgs/menu1.png)

@@ -1,4 +1,4 @@
-# How To Use
+# ogrig2
 
-[Top](index.md)
-[Joint Edit Tool](joint_edit.md)
+[Flow](index.md)
+[Guide Editor](guide_editor.md)
