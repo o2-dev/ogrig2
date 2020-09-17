@@ -13,7 +13,11 @@ Maya標準の骨をモデルに合わせ配置し、その骨に対しカスタ�
 追加したジョイントチェーンを選択し、**Guide Editor**でアトリビュートを追加していきます。
 <br>
 <br>
+
+
 ![](imgs/advance_guide_edit1.png)
+
+
 <br>
 <br>
 elbowPartsはL、Rで一個だけなので、namespaceは「none」に設定、いくつもある場合は「A」「B」などを付けます。
