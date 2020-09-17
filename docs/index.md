@@ -31,14 +31,10 @@ ___
 **+骨の位置合わせと軸の設定**  
 骨の位置をモデルに合わせ調整したら、**[Guide Editor](guide_editor.md)**や、
 Maya標準機能のOrientJointツールなどを使いつつ、センターとL側の骨の軸の向きを設定します。
-  
-※ただし下記骨の軸は自動調整されるので、軸の向きの調整は不要です。
-arm_style_L ~ hand_style_L
-leg_style_L ~ foot_style_L
-
+<br>
 hip_style_C, leg_style_Lは水平に
-
-
+<br>
+<br>
 軸の向きは下の設定に合わせて下さい。
 スタイル骨の初期設定がこの設定なので、よく分からない時は骨の軸を表示し、
 それが初期設定と大体同じか確認してみて下さい。
@@ -67,20 +63,12 @@ leg_L_piv_heel      |かかとピボット
 leg_L_piv_toe       |つま先ピボット     
 
 <br>
-
-![](imgs/joint_attrs2.png)
-Attr             |意味
------------------|---------------
-is_mcdj          |MC骨を２重間接にするか否か
-is_ikdj          |IK骨を２重間接にするか否か
-mc_split         |MC骨の分割数
-bj_split         |バインド骨の分割数
-※ splitを-1にセットすると、ウィンドウの split_dist スライダーの距離に応じて骨が分割されます。
 <br>
 **+スタイル骨のミラー**
 L側の設定がすべて終わったら、ミラーリングしたい骨のルート（人型ならshoulder1_L, leg1_L）を選択し
 **ogRig2->Builder->Mirror Template**でミラーして下さい。
-  
+<br>
+<br>
 
 ___
 ####**2. リグの生成**
@@ -89,12 +77,12 @@ ___
 
 ![](imgs/rig_fin.png)
 <!-- ![](imgs/hierarchy1.png) -->
-
-  
+<br>
+<br>
 ___
 ####**3. MCからリグへのベイク**
-ベイクしたいリグのmc骨をどれか一つ選択し、「Bake」ボタンを押すとリグにキーがベイクされます。
-複数のリグの骨を選択すれば、複数のリグを一括で処理できます。
+ogRig2 -> Animation -> MC Bake Toolを起動
+アセットをリストから選択し、「bake mc->rig」にてベイクします。
 
 
 <!---
