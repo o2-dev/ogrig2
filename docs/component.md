@@ -1,27 +1,57 @@
 ___
 # Component
-1. [概要](#anchor1)
-1. [順序](#anchor2)
-1. [詳細](#anchor3)
 
-<a id="anchor1"></a>
 
-1. 概要
-    - 日本の挨拶についてまとめる
+##fk_basic_01
+    基本的なFKのリグ。
+    parentSpaceにて任意の親を追加可能。
+    null_numにてnullの数を指定可能。
 
-<a id="anchor2"></a>
+##fk_tweak_2d_01
+    基本的な垂れ物のリグ。
+    parentSpaceにて任意の親を追加可能。
+    null_numにてnullの数を指定可能。
 
-1. 挨拶の順序
-    1. おはようございます。
-    1. こんにちは。
-    1. こんばんは。
+##fk_all_01
+    fk_tweak_2d_01をまとめて動かすリグ。
+    Dstsに対象を指定する。
 
-<a id="anchor3"></a>
+##spine_basic_01
+    背骨。HumanTemplateで使用。
 
-1. 詳細
-    1. 「おはようございます」とは  
-    起床時、あるいは朝人に会った時の挨拶。
-    1. 「こんにちは」とは  
-    語源は「今日は、ご機嫌いかがですか？」が省略されたもの
-    1. 「こんばんは」とは  
-    語源は「今晩は〇〇ですね。」の後半部分が省略されたもの
+##head_basic_01
+    頭。HumanTemplateで使用。
+
+##shoulder_basic_01
+    肩。HumanTemplateで使用。
+
+##arm_basic_01
+    2間接の腕。HumanTemplateで使用。
+
+##arm_1jnt_01
+    1間接の腕。
+
+##hand_basic_01
+    指のFKリグ。HumanTemplateで使用。
+
+##finger_3jnt_01
+    指のIK/FKリグ。
+
+##leg_basic_01
+    2間接の足。HumanTemplateで使用。
+
+##leg_3jnt_02
+    3間接の足。HumanBeastLegTemplateで使用。
+
+##leg_3jnt_01
+    使用不可
+
+##fk_tweak_1d_01
+    使用不可
+
+##chain_hairsim_01
+    使用不可
+
+##chain_hairsim_02
+    使用不可
+

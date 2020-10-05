@@ -18,10 +18,11 @@ Joint Property  |      |note
 **Namespace**   |必須  |アクセ、髪の毛など、チェーンの本数が多いものはネームスペースA~Zを付けていきます。
 **Side**        |必須  |center, left, rightのラベルを付けます。
 **CompType**    |必須  |生成されるリグの種類を決めます。
-**ParentSpaces**|必須  |骨のラベル表示を切り替えます。
+**ParentSpaces**|必須  |リグの親空間切替を行いたい場合、親ノード名を記入します。
 **ParentJoint** |      |親となる骨をスタイル骨の親と変えたい時はここで指定。
 **size**        |必須  |CTLの大きさ。
 **prefk_num**   |     |chain_hairsim_*コンポーネントで使用。
+**null_num**   |     |fk_basic_01, fk_tweak_2d_01でnullを追加するために必要。
 **AutoAlign**   |必須  |あまり対応していないので、基本OFFで。
 **HasBuild**    |必須  |OFFにしておく。
 **IsRigGuide**  |必須  |ONにしておく。
