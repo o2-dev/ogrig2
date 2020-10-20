@@ -104,6 +104,7 @@ ___
 
 ![](imgs/hairsys_sim.png)
 
+  -
     **Start Curve Attract** ・・・ 元の形状をどれだけキープするか。  
     **Attraction Scale** ・・・ 根元から毛先にかけてのキープ具合。基本的には根元高め、毛先弱め。  
     **Drag** ・・・ 上げると急な動きに振り回されづらくなります。  
@@ -124,12 +125,14 @@ ___
 
 ![](imgs/add_collision.png)
 
+  -
     **nRigid**というノードが作成されるので、AttributeEditorにて**Solver Display > Collision Thickness**
     のように変更し、再生時にコリジョンの厚みが表示されるようにします。  
     必要に応じて、**Thickness(厚み)**も調整します。  
 
 ![](imgs/edit_collision.png)
 
+  -
     ogSim > Sim mode で Partを選択すると、hairSystemが選択されます。  
     AttributeEditorで、**Solver Display > Collision Thickness** に設定。  
     **Hair Width**＝コリジョンの厚みを調整します。細すぎると貫通してしまうので、太めに設定します。  
