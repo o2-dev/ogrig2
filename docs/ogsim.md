@@ -1,13 +1,10 @@
-###ogSim
-
----
-![](imgs/ogsim1.png)
----
+###**ogSim**
+___
 ###**何のツール？**
 プリセットを基にショットワークでhairsimを行うツールです。  
 ogRig2 > Utilities > ogSim で起動します。  
 
-<br>
+___
 ---
 ###**プリセットについて**
 #####AssetPreset  
@@ -18,8 +15,7 @@ ogRig2 > Utilities > ogSim で起動します。
     hairsimの設定。hairSystemノードのアトリビュートプリセットです。  
     案件をまたいで使いまわしたり、カット単位で作ったり、自分用のものを作ったりします。  
 
-<br>
----
+___
 ###**大まかな流れ**
 1. **AssetPreset、SimPresetの作成**  
 プロジェクトのRigger、AnimSVなどが各キャラ分用意します。
@@ -46,7 +42,7 @@ hairsimの調整が終わったらPartを選び、**Do > Bake Sim**にてFKに�
 やっぱSimをやり直す場合は、**Do > Reconnect**にて、再度SimRigとFKをコネクトしてください。  
 
 <br>
----
+___
 ###**GUI説明**
 
 #####File  
@@ -98,13 +94,14 @@ hairsimの調整が終わったらPartを選び、**Do > Bake Sim**にてFKに�
     fkリストを選択すると、実際にFKチェーンが選択されます。  
 
 <br>
----
+___
 ###**Sim Tips**
 
 <br>
   - **動きの調整**  
     ogSim > Sim mode で Partを選択すると、hairSystemが選択されます。  
     AttributeEditorで、図の部分を主に調整します。  
+
 ![](imgs/hairsys_sim.png)  
     **Start Curve Attract** ・・・ 元の形状をどれだけキープするか。  
     **Attraction Scale** ・・・ 根元から毛先にかけてのキープ具合。基本的には根元高め、毛先弱め。  
@@ -115,6 +112,7 @@ hairsimの調整が終わったらPartを選び、**Do > Bake Sim**にてFKに�
   - **重力**  
     hairSystemをAttributeEditorで開き、タブを右に送っていくと**nucleus**がいます。  
     これの**gravity**を調整して下さい。  
+
 ![](imgs/nucleus_gravity.png)  
 
 <br>
@@ -122,13 +120,16 @@ hairsimの調整が終わったらPartを選び、**Do > Bake Sim**にてFKに�
     コリジョンモデル用として適当なサイズのCubeやSphereを作成し、体の骨（垂れ物の骨はNG）にコンストレインします。
     コリジョンモデルを選択し、**nCloth > Create Passive Collider**のオプションを開き、
     コリジョンさせたい**ncleus**を選択し、実行します。  
+
 ![](imgs/add_collision.png)  
     **nRigid**というノードが作成されるので、AttributeEditorにて**Solver Display > Collision Thickness**
     のように変更し、再生時にコリジョンの厚みが表示されるようにします。  
     必要に応じて、**Thickness(厚み)**も調整します。  
+
 ![](imgs/edit_collision.png)  
     ogSim > Sim mode で Partを選択すると、hairSystemが選択されます。  
     AttributeEditorで、**Solver Display > Collision Thickness** に設定。  
     **Hair Width**＝コリジョンの厚みを調整します。細すぎると貫通してしまうので、太めに設定します。  
     基本的には、根元が細く、毛先に行くにしたがって太くしておくのが良いです。  
+    
 ![](imgs/hairsys_collision.png)  
