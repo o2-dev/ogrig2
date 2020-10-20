@@ -79,6 +79,7 @@ ___
 <br>
 ####Editモード  
 ![](imgs/ogsim_edit_mode.gif)
+
   Editモードでは、現在のAssetPresetを編集します。  
   Partの追加、削除、PartへのFKチェーンの登録、削除を行えます。  
 
@@ -102,7 +103,8 @@ ___
     ogSim > Sim mode で Partを選択すると、hairSystemが選択されます。  
     AttributeEditorで、図の部分を主に調整します。  
 
-![](imgs/hairsys_sim.png)  
+![](imgs/hairsys_sim.png)
+
     **Start Curve Attract** ・・・ 元の形状をどれだけキープするか。  
     **Attraction Scale** ・・・ 根元から毛先にかけてのキープ具合。基本的には根元高め、毛先弱め。  
     **Drag** ・・・ 上げると急な動きに振り回されづらくなります。  
@@ -113,7 +115,7 @@ ___
     hairSystemをAttributeEditorで開き、タブを右に送っていくと**nucleus**がいます。  
     これの**gravity**を調整して下さい。  
 
-![](imgs/nucleus_gravity.png)  
+![](imgs/nucleus_gravity.png)
 
 <br>
   - **コリジョンの追加方法**  
@@ -121,15 +123,17 @@ ___
     コリジョンモデルを選択し、**nCloth > Create Passive Collider**のオプションを開き、
     コリジョンさせたい**ncleus**を選択し、実行します。  
 
-![](imgs/add_collision.png)  
+![](imgs/add_collision.png)
+
     **nRigid**というノードが作成されるので、AttributeEditorにて**Solver Display > Collision Thickness**
     のように変更し、再生時にコリジョンの厚みが表示されるようにします。  
     必要に応じて、**Thickness(厚み)**も調整します。  
 
-![](imgs/edit_collision.png)  
+![](imgs/edit_collision.png)
+
     ogSim > Sim mode で Partを選択すると、hairSystemが選択されます。  
     AttributeEditorで、**Solver Display > Collision Thickness** に設定。  
     **Hair Width**＝コリジョンの厚みを調整します。細すぎると貫通してしまうので、太めに設定します。  
     基本的には、根元が細く、毛先に行くにしたがって太くしておくのが良いです。  
-    
-![](imgs/hairsys_collision.png)  
+
+![](imgs/hairsys_collision.png)
