@@ -1,6 +1,5 @@
-###Guide Editor
-
----
+###**Guide Editor**
+___
 ![](imgs/guide_editor1.png)
 ---
 ####**何のツール？**
